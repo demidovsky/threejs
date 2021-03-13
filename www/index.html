@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>fanid</title>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--
+	<link rel="shortcut icon" href="/favicon.ico" type="image/ico">
+	<link rel="icon" href="/favicon.ico" type="image/ico">
+	<link rel="icon" type="image/png" href="/favicon.ico">  
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48"> 
+	-->
+
+	<!-- main styles  -->
+	<link rel="stylesheet" type="text/css" href="local/templates/fanid/assets/styles.css">
+	<link rel="stylesheet" type="text/css" href="local/templates/fanid/css/selectize.css">
+	<link rel="stylesheet" type="text/css" href="local/templates/fanid/css/selectize.default.css">
+
+	<!-- eof CSS -->
+	<script src="local/templates/fanid/assets/bundle.js"></script>
+	
+	<script src="local/templates/fanid/js/microplugin.min.js"></script>
+	<script src="local/templates/fanid/js/sifter.min.js"></script>
+	<script src="local/templates/fanid/js/selectize.min.js"></script>
+
+	<script src="3d/three.js"></script>
+	<script src="3d/Projector.js"></script>
+	<script src="3d/Detector.js"></script>
+	<script src="3d/CanvasRenderer.js"></script>
+
+	<script src="3d/OBJLoader.js"></script>
+	<script src="3d/scene_old.js?v2"></script>
+
+</head>
+<body class="body">
+	<div class="wrapper ">
+		<header class="header header-page">
+		 	<div id="three_scene" style=""></div>
+			<div class="header__video-wrapp" style="display: none;">
+	        <div class="header__video-box">
+	           <video class="header__video" autoplay>
+	               <source src="local/templates/fanid/video/header.mp4" type="video/mp4">
+	              <source src="local/templates/fanid/video/header.mp4" type="video/webm">
+	          </video>
+	        </div>
+	    </div>
+			<div class="header-wrapper">
+				<div class="header__top">
+					<div class="container">
+						<div class="header__mobile-wrap">
+							<div class="header__toggle">
+								<svg>
+				          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-list"></use>
+				        </svg>
+							</div>
+							<a href="index.html" class="header__logo">FAN ID</a>
+						</div>
+						<p class="header__slogan">
+							КУБОК КОНФЕДЕРАЦИЙ FIFA 2017 <br>В РОССИЙСКОЙ ФЕДЕРАЦИИ
+						</p>
+						<div class="header-tools">
+							<form action="">
+								<div class="header__select">
+									<select id="select-country">
+										<option value="ru">Русский</option>
+										<option value="en">English</option>
+										<option value="fr">Français</option>
+										<option value="de">Deutsch</option>
+										<option value="es">Español</option>
+									</select>
+								</div>
+								<div class="header__font fontUp">
+									<span class="header__font__1">a</span>
+									<span class="header__font__2">a</span>
+									<span class="header__font__3">a</span>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav container">
+					<ul class="header-list">
+						<li class="header-list__item"><a href="#" class="header-list__link">РЕГИСТРАЦИЯ</a></li>
+						<li class="header-list__item"><a href="" class="header-list__link">Узнать статус</a></li>
+						<li class="header-list__item"><a href="" class="header-list__link">ЦЕНТРы выдачи</a></li>
+						<li class="header-list__item"><a href="ref.html" class="header-list__link">Справка</a></li>
+						<li class="header-list__item"><a href="" class="header-list__link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__logo-img container">
+				<div id="ball_click_area"></div>
+				<img src="local/templates/fanid/img/desktop/logo_n.png" alt="logo">
+				<div class="top-line"></div>
+			</div>
+		</header>
+		<main class="main main-page">
+			<div class="container">
+				<div class="main__wrap-btn">
+					<a href="registration.html" class="main__btn">Начать регистрацию</a>
+				</div>
+				<div class="main__item">
+					<div class="user">
+						<h3 class="user__item-title">FAN ID</h3>
+						<p class="user__sub-title">
+							Карта индентификации зрителя<br>
+							FAN IDENTIFICATION CARD
+						</p>
+						<div class="user__img">
+							<img src="local/templates/fanid/img/desktop/user.jpg" alt="user">
+						</div>
+						<div class="user__info">
+							<p class="user__name">
+								<span class="user__ru">
+									Иван Иванов
+								</span><br>
+								<span class="user__en">
+									Ivan IVANOV
+								</span>
+							</p>
+							<p class="user__number">
+								AAA123456
+							</p>
+							<p class="user__id">
+								l898902C<3U08061F9406236ZE<<<<14 <br>
+								l898902C<3U08061F9406236ZE<<<<14
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="main__text">
+					<p class="main__title">
+						Для посещения мероприятий Кубка Конфедераций 2017 необходимо приобрести билет и&nbsp;получить <b>FAN ID</b>&nbsp;в центрах выдачи.
+					</p>
+					<p class="main__subtext">
+						Дорогие друзья! 
+					</p>
+					<p class="main__subtext">
+						Добро пожаловать на&nbsp;ресурс FAN ID&nbsp;Кубка Конфедераций 2017. Здесь вы&nbsp;можете получить всю необходимую информацию о&nbsp;FAN ID&nbsp;для посещения мероприятий Кубка Конфедераций 2017 , правила заполнения анкеты и&nbsp;адреса центров выдачи FAN&nbsp;ID.
+					</p>
+					<p class="main__subtext">
+						Для приобретения билетов перейдите на&nbsp;сайт <a href="tickets.fifa.com">tickets.fifa.com.</a>
+					</p>
+					<p class="main__subtext">
+						До&nbsp;встречи на&nbsp;матчах Кубка Конфедераций 2017!
+					</p>
+				</div>
+			</div>
+		</main>
+	</div>
+	<div class="mobile-panel">
+		<div class="mobile-panel-wrap">
+			<div class="mobile-panel__close">
+				<svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross-thick"></use>
+        </svg>
+			</div>
+			<h4>Меню</h4>
+			<ul class="mobile-menu">
+				<li class="mobile-menu__item"><a href="" class="mobile-menu__item__link mobile-menu__item__link--act">РЕГИСТРАЦИЯ</a></li>
+				<li class="mobile-menu__item"><a href="" class="mobile-menu__item__link">Узнать статус</a></li>
+				<li class="mobile-menu__item"><a href="" class="mobile-menu__item__link">ЦЕНТРы выдачи</a></li>
+				<li class="mobile-menu__item"><a href="" class="mobile-menu__item__link">купить билет</a></li>
+			</ul>
+			<form action="" class="mobile-panel__tools">
+				<div class="mobile-panel__select">
+					<select name="" id="">
+						<option value="">Русский</option>
+						<option value="">English</option>
+					</select>
+				</div>
+				<div class="mobile-panel__font fontUp">
+					<span class="mobile-panel__font__1">a</span>
+					<span class="mobile-panel__font__2">a</span>
+					<span class="mobile-panel__font__3">a</span>
+				</div>
+			</form>
+			<div class="mobile-panel__info">
+				<p>
+					Телефон горячей линии
+					по вопросам регистрации
+					зрителей:
+				</p>
+				<b>
+					8 (800) 550-00-14
+				</b>
+				<p>
+					круглосуточная бесплатная
+					многоканальная телефонная линия
+					при звонке из России
+				</p>
+				<b>+7 (495) 663-39-02</b>
+				<p>для звонков из-за рубежа</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<p class="footer__copy">
+				©2016 FAN-ID.RU
+			</p>
+			<div class="footer-links">
+				<a href="ref.html" class="footer__link">Правовая информация</a>
+				<a href="rules.html" class="footer__link">Правила использования</a>
+				<br>
+				<a href="" class="footer__link">Обратная связь</a>
+				<a href="" class="footer__link">Справка</a>
+			</div>
+			<div class="footer-social">
+				<a href="" class="footer-social__link">
+					<svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-social-icon-fb"></use>
+          </svg>
+				</a>
+				<a href="" class="footer-social__link">
+					<svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-social-icon-yt"></use>
+          </svg>
+				</a>
+				<a href="" class="footer-social__link">
+					<svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-inst"></use>
+          </svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

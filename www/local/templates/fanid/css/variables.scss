@@ -1,0 +1,31 @@
+//utils
+$images: "./../img";
+$imgslg: "/desktop";
+$imgssm: "/tablet";
+$imgsxs: "/mobile";
+
+//colors
+$white: #ffffff;
+$yellow: #ffcc00;
+$g-black: #0b111d;
+$black: #000000;
+$green: #2a8a2a;
+$g-yellow: #dfb514;
+$f-green: #1f731f;
+$gray: #848688;
+$g-gray: #525252;
+$blue: #b0bec5;
+$y-gray: #535353;
+$m-blue: #142235;
+$i-gray: #737373;
+$red: #db0f00;
+$l-green: #4caf4f;
+$l-white: #f9fafb;
+$l-gray: #aab1be;
+
+//layout breakpoints
+$lbrp-xxs:     450px !default;
+$lbrp-xs:     700px !default;
+$lbrp-sm:     960px !default;
+$lbrp-md:     1024px !default;
+$lbrp-lg:     1280px !default;
